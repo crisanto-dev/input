@@ -24,14 +24,15 @@
   var myInput = document.getElementById('javascript');
   var inputHere = document.getElementById('inputHere');
 
-  myInput.addEventListener('click', function (e) {
 
+  myInput.addEventListener('click', function (e) {
     input.isCheck = myInput.checked
-    input.change('isCheck', function (newValue, oldValue) {
-      if (newValue === true) {
-        inputHere.innerHTML = '<input type="text" name ="" value="">';
-      } else {
-        inputHere.innerHTML = "";
-      }
-    })
+  })
+
+  input.change('isCheck', function (newValue, oldValue) {
+    if (newValue === true) {
+      inputHere.innerHTML = '<input type="text" name ="" value="">';
+    } else {
+      inputHere.innerHTML = "";
+    }
   })
